@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>My Awesome Page</title>
-  <!-- Link to Tailwind CSS CDN -->
-  <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+  <head>
+    <title>My Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to Tailwind CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.17/tailwind.min.css" integrity="sha512-CjKoJnDDAJc3q9X4aeM4hDzj1ZgCnSbt7+RmSbfDsp7PfjGGB+9XSyx2Q1ikV7ZuJevP/7sIGsfx+wsi8W+Blg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
-  <header class="bg-white shadow-lg">
-    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-      <h1 class="text-3xl font-bold text-gray-900">
-        My Awesome Page
-      </h1>
-    </div>
-  </header>
-  <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-    <div class="flex flex-wrap">
-      <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-        <div class="bg-white border rounded shadow p-2">
-          <div class="flex flex-row items-center">
-            <div class="flex-1 text-sm">
-              <h2 class="font-bold text-base mb-2">
-                Days Required
-              </h2>
-              <p class="text-gray-500">
-                View the number of days required to complete the task.
-              </p>
-            </div>
-            <div class="flex-initial">
-              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0 2a10 10 0 100-20 10 10 0 000 20zm-6.58-6.58a4 4 0 015.66 0l1.42-1.42a6 6 0 00-8.48 0l1.4 1.42zm9.18-1.42l1.42 1.42a4 4 0 010 5.66l-1.42 1.42a6 6 0 000-8.48zM4.34 5.76a4 4 0 015.66 0l1.42-1.42a6 6 0 00-8.48 0l1.4 1.42zm9.18 1.42l1.42-1.42a4 4 0 010 5.66l-1.42 1.42a6 6 0 000-8.48z" clip-rule="evenodd" />
-              </svg>
-            </div>
-          </div>
-        </div>
+  <body class="bg-gray-100">
+    <!-- Header Section -->
+    <header class="bg-white shadow">
+      <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl font-bold text-gray-900">My Page</h1>
       </div>
-      <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-        <div class="bg-white border rounded shadow p-2">
-          <div class="flex flex-row items-center">
-            <div class="flex-1 text-sm">
-              <h2 class="font-bold text-base mb-2">
-                Remaining Resources
-              </h2>
-              <p class="text-gray-500">
-                View the remaining resources at
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+      <div class="px-4 py-6 sm:px-0">
+        <!-- Task Days -->
+        <div class="mb-6">
+          <h2 class="text-lg font-medium text-gray-900">Task Days</h2>
+          <p class="mt-1 text-sm text-gray-500">Number of days required to complete the task.</p>
+          <p class="mt-1 text-4xl font-extrabold text-gray-900">10</p>
+        </div>
+
+        <!-- Remaining Resources -->
+        <div class="mb-6">
+          <h2 class="text-lg font-medium text-gray-900">Remaining Resources</h2>
+          <p class="mt-1 text-sm text-gray-500">Number of remaining resources at any point of the route.</p>
+          <p class="mt-1 text-4xl font-extrabold text-gray-900">25</p>
+        </div>
+
+        <!-- Current Resource Usage -->
+        <div class="mb-6">
+          <h2 class="text-lg font-medium text-gray-900">Current Resource Usage</h2>
+          <p class="mt-1 text-sm text-gray-500">Number of resources being consumed at the moment.</p>
+          <p class="mt-1 text-4xl font-extrabold text-gray-900">5</p>
+        </div>
+
+        <!-- Reactor Power Distribution -->
+        <div class="mb-6">
+          <h2 class="text-lg font-medium text-gray-900">Reactor Power Distribution</h2>
+          <p class="mt-1 text-sm text-gray-500">Chart showing the distribution of reactor power.</p>
+          <img src="reactor-power-distribution-chart.png" alt="Reactor Power Distribution Chart">
+        </div>
+
+        <!-- Autoclave and SH Population Statistics -->
+        <div class="mb-6">
+          <h2 class="text-lg font-medium text-gray-900">Autoclave and SH Population Statistics</h2>
+          
