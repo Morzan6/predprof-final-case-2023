@@ -8,18 +8,33 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         window.onload = function (){
-            
+            const resourses = {{resourses}}
+            const power = {{power}}
+            const press = {{press}}
+            const temp = {{temp}}
+            const population = {{population}}
             const days = {{days}}
+
             const days_time = {{days_time}}
-            printDelayedValues(days, days_time, "days");
+            const resourses_time = {{resourses_time}}
+            const resourses_nows_time = {{resourses_nows_time}}
+            const power_time = {{power_time}}
+            const press_time = {{press_time}}
+            const temp_time = {{temp_time}}
+            const population_time = {{population_time}}
+            
+            printDelayedValues(days, days_time, "day");
+            
+            
+            
         }
 
         function printDelayedValues(array, delay, id) {
-            days = document.getElementById(`${id}`)
+            element = document.getElementById(`${id}`)
             let i = 0;
             const intervalId = setInterval(() => {
-                days.innerHTML = array[i];
-              console.log(array[i]);
+                element.innerHTML = array[i];
+              console.log(array[i], id);
               i++;
               if (i >= array.length) {
                 
@@ -90,7 +105,7 @@
     <!-- Кол-во дней -->
     <div class="fixed top-0 left-0 m-4 p-4 bg-gray-800 rounded-lg">
       <h2 class="font-bold mb-2">Дни до завершения миссии:</h2>
-      <p id="days" class="days text-3xl font-bold">
+      <p id="day" class="text-3xl font-bold">
         1
       </p>
     </div>
@@ -98,30 +113,33 @@
     <!-- Кол-во ресурсов -->
     <div class="fixed top-0 right-0 m-4 p-4 bg-gray-800 rounded-lg">
       <h2 class="font-bold mb-2">Оставшиеся ресурсы:</h2>
-      <p class="text-3xl font-bold">1000 SH</p>
+      <p id="resourses" class="inline-flex text-3xl font-bold"> {{resourses.0}}  </p><a class="ml-2 inline-flex text-3xl font-bold"> SH</a>
     </div>
 
     <!-- Расход ресурсов -->
     <div class="fixed bottom-0 left-0 m-4 p-4 bg-gray-800 rounded-lg">
       <h2 class="font-bold mb-2">Расход ресурсов в текущий момент:</h2>
-      <p class="text-3xl font-bold">10 SH/час</p>
+      <p id="resourses_now" class="inline-flex text-3xl font-bold">  </p><a class="ml-2 inline-flex text-3xl font-bold"> SH/день</a>
+      
     </div>
 
     <!-- Распределение мощности реактора -->
     <div class="fixed bottom-0 right-0 m-4 p-4 bg-gray-800 rounded-lg">
       <h2 class="font-bold mb-2">Распределение мощности реактора:</h2>
-      <p class="text-3xl font-bold">80%</p>
+      <p id="power" class="inline-flex text-3xl font-bold">  </p><a class="ml-2 inline-flex text-3xl font-bold"> %</a>
+      
     </div>
 
     <!-- Характеристики автоклава и популяции SH -->
-    <div class="fixed bottom-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <div class="fixed -pt-8 bottom-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
       <div class="bg-gray-800 p-4 rounded-lg mb-4">
-        <h2 class="font-bold mb-2">Автоклав</h2>
-        <p>Давление: 3 атмосферы</p>
-        <p>Температура: 150 градусов Цельсия</p>
+        <h2 class="font-bold mb-2 ">Автоклав</h2>
+        <p>Давление: <a id="press"></a> атмосферы</p>
+        <p>Температура: <a id="temp"></a> градусов Цельсия</p>
       </div>
       <div class="bg-gray-800 p-4 rounded-lg">
         <h2 class="font-bold mb-2">Популяция SH</h2>
+         <a id="population"></a> SH
     </div>
 
 

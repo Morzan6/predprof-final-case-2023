@@ -1,5 +1,5 @@
-import formuls as f
-import get 
+from .formuls import *
+from .get import req
 
 def clc(r):
     res1 = 1e10
@@ -21,8 +21,8 @@ def clc(r):
             shbig = []
             counter = 0
             while r1 > 0:
-                v = f.V(e, sh, oxi, t)
-                sh = f.SHnew(sh, t, oxi)
+                v = V(e, sh, oxi, t)
+                sh = SHnew(sh, t, oxi)
                 Vbig.append(v)
                 shbig.append(sh)
                 counter += 1
@@ -42,4 +42,5 @@ def one_route(data, no):
         max_oxi = max(max_oxi, ans[1])
     return [i for i in range(1, sum+1)], max_oxi
 
-#print(one_route(get.req("https://dt.miet.ru/ppo_it_final", "9e83w26h"), 0))
+print(one_route(req("https://dt.miet.ru/ppo_it_final/judge", "9e83w26h"), 0))
+print()

@@ -1,15 +1,14 @@
 import requests
 
-key  = "9e83w26h"
-
-
-adr = "https://dt.miet.ru/ppo_it_final"
 def req(adr, key):
+    """
+        Returns list of dicts. One dict for each route#
+    """
 
     params = {"X-Auth-Token": key}
 
-    resp = requests.get(adr, headers=params).text
+    resp = requests.get(adr, headers=params)
 
-    return resp
+    return resp.json()["message"]
 
-print(req(adr, key))
+print(req("https://dt.miet.ru/ppo_it_final/judge", "9e83w26h"))
