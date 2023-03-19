@@ -1,53 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>My Page</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link to Tailwind CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.17/tailwind.min.css" integrity="sha512-CjKoJnDDAJc3q9X4aeM4hDzj1ZgCnSbt7+RmSbfDsp7PfjGGB+9XSyx2Q1ikV7ZuJevP/7sIGsfx+wsi8W+Blg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Mission</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-  <body class="bg-gray-100">
-    <!-- Header Section -->
-    <header class="bg-white shadow">
-      <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold text-gray-900">My Page</h1>
-      </div>
-    </header>
-
-    <!-- Main Content Section -->
-    <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-      <div class="px-4 py-6 sm:px-0">
-        <!-- Task Days -->
-        <div class="mb-6">
-          <h2 class="text-lg font-medium text-gray-900">Task Days</h2>
-          <p class="mt-1 text-sm text-gray-500">Number of days required to complete the task.</p>
-          <p class="mt-1 text-4xl font-extrabold text-gray-900">10</p>
-        </div>
-
-        <!-- Remaining Resources -->
-        <div class="mb-6">
-          <h2 class="text-lg font-medium text-gray-900">Remaining Resources</h2>
-          <p class="mt-1 text-sm text-gray-500">Number of remaining resources at any point of the route.</p>
-          <p class="mt-1 text-4xl font-extrabold text-gray-900">25</p>
-        </div>
-
-        <!-- Current Resource Usage -->
-        <div class="mb-6">
-          <h2 class="text-lg font-medium text-gray-900">Current Resource Usage</h2>
-          <p class="mt-1 text-sm text-gray-500">Number of resources being consumed at the moment.</p>
-          <p class="mt-1 text-4xl font-extrabold text-gray-900">5</p>
-        </div>
-
-        <!-- Reactor Power Distribution -->
-        <div class="mb-6">
-          <h2 class="text-lg font-medium text-gray-900">Reactor Power Distribution</h2>
-          <p class="mt-1 text-sm text-gray-500">Chart showing the distribution of reactor power.</p>
-          <img src="reactor-power-distribution-chart.png" alt="Reactor Power Distribution Chart">
-        </div>
-
-        <!-- Autoclave and SH Population Statistics -->
-        <div class="mb-6">
-          <h2 class="text-lg font-medium text-gray-900">Autoclave and SH Population Statistics</h2>
+    <style  type="text/css">
+        @keyframes flight {
+            0% {
+              transform: translateX(0);
+            }
+            50% {
+              transform: translateX(20px);
+            }
+            100% {
+              transform: translateX(0);
+            }
+          }
           
+          .animate-flight {
+            animation-name: flight;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+          }
+          
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css" integrity="sha512-ZlhYkou+VvHvZ0W8V2I0Qmq9T91v4M6UW8VU4I6ktL7sZv6TnHJ8kS2xl9Pzg4vzs/jWzMV8aU6wNyU6KJ+sRg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+
+  <body class="bg-gray-900 text-white flex items-center justify-center h-screen">
+
+    <!-- Космический корабль -->
+    <div class="animate-flight flex fixed items-center justify-center mt-12 w-48 fill-gray-200">
+        <svg  height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">            
+            <path d="M457.729,270.349h-46.073c-7.017-34.394-25.414-65.725-52.264-88.763c-26.678-22.893-60.226-36.23-95.23-38.032v-38.265
+				c0-1.809-0.595-3.475-1.592-4.828c13.973-3.023,24.476-15.474,24.476-30.34c0-17.119-13.927-31.047-31.045-31.047
+				c-17.119,0-31.047,13.928-31.047,31.047c0,14.865,10.504,27.317,24.478,30.34c-0.996,1.352-1.592,3.018-1.592,4.828v38.265
+				c-35.006,1.802-68.554,15.139-95.232,38.032c-26.85,23.039-45.248,54.37-52.265,88.763H54.27c-29.924,0-54.27,24.346-54.27,54.27
+				v30.741c0,15.579,12.675,28.255,28.256,28.255h78.222c-1.698,3.628-2.653,7.671-2.653,11.935v4.465
+				c0,11.08,6.414,20.685,15.72,25.313l-23.142,34.929c-2.49,3.757-1.462,8.821,2.295,11.31c1.387,0.919,2.952,1.359,4.5,1.359
+				c2.645,0,5.239-1.285,6.81-3.654l27.166-41.002H247.84v36.494c0,4.508,3.653,8.161,8.161,8.161s8.161-3.653,8.161-8.161v-36.494
+				h110.663l27.163,41.002c1.569,2.37,4.164,3.654,6.81,3.654c1.548,0,3.112-0.44,4.5-1.359c3.757-2.488,4.784-7.552,2.295-11.31
+				l-23.139-34.928c9.308-4.628,15.723-14.233,15.723-25.314v-4.465c0-4.263-0.954-8.306-2.653-11.935h78.221
+				c15.58,0,28.256-12.675,28.256-28.255v-30.741C512,294.694,487.654,270.349,457.729,270.349z M241.275,70.121
+				c0-8.12,6.606-14.726,14.726-14.726c8.119,0,14.724,6.606,14.724,14.726c0,8.119-6.605,14.725-14.724,14.725
+				C247.88,84.845,241.275,78.24,241.275,70.121z M256.001,159.657c66.979,0,123.893,45.692,138.806,109.954H338.4v-12.493
+				c0-15.58-12.675-28.256-28.256-28.256H201.853c-15.579,0-28.255,12.675-28.255,28.256v12.493h-56.407
+				C132.106,205.349,189.021,159.657,256.001,159.657z M322.08,257.117v12.493H189.92v-12.493c0-6.581,5.353-11.935,11.934-11.935
+				h108.291C316.726,245.182,322.08,250.536,322.08,257.117z M483.744,367.294H356.531c-4.508,0-8.161,3.653-8.161,8.161
+				s3.653,8.161,8.161,8.161h23.388c6.581,0,11.935,5.354,11.935,11.935v4.465c0,6.581-5.354,11.935-11.935,11.935h-0.633
+				c-0.011,0-0.021,0-0.032,0H132.739c-0.008,0-0.015,0-0.023,0h-0.635c-6.581,0-11.935-5.354-11.935-11.935v-4.465
+				c0-6.581,5.354-11.935,11.935-11.935h198.337c4.508,0,8.161-3.653,8.161-8.161s-3.653-8.161-8.161-8.161H28.256
+				c-6.581,0-11.935-5.353-11.935-11.934v-30.741c0-20.925,17.024-37.949,37.948-37.949h403.46c20.925,0,37.95,17.024,37.95,37.949
+				v30.741h0C495.679,361.94,490.325,367.294,483.744,367.294z"/>
+			<path d="M455.276,318.821H56.724c-4.508,0-8.161,3.653-8.161,8.161s3.653,8.16,8.161,8.16h398.552c4.508,0,8.16-3.653,8.16-8.16
+				S459.783,318.821,455.276,318.821z"/>
+                 
+
+        </svg>
+    </div>
+    <!-- Кол-во дней -->
+    <div class="fixed top-0 left-0 m-4 p-4 bg-gray-800 rounded-lg">
+      <h2 class="font-bold mb-2">Дни до завершения миссии:</h2>
+      <p class="text-3xl font-bold">25</p>
+    </div>
+
+    <!-- Кол-во ресурсов -->
+    <div class="fixed top-0 right-0 m-4 p-4 bg-gray-800 rounded-lg">
+      <h2 class="font-bold mb-2">Оставшиеся ресурсы:</h2>
+      <p class="text-3xl font-bold">1000 SH</p>
+    </div>
+
+    <!-- Расход ресурсов -->
+    <div class="fixed bottom-0 left-0 m-4 p-4 bg-gray-800 rounded-lg">
+      <h2 class="font-bold mb-2">Расход ресурсов в текущий момент:</h2>
+      <p class="text-3xl font-bold">10 SH/час</p>
+    </div>
+
+    <!-- Распределение мощности реактора -->
+    <div class="fixed bottom-0 right-0 m-4 p-4 bg-gray-800 rounded-lg">
+      <h2 class="font-bold mb-2">Распределение мощности реактора:</h2>
+      <p class="text-3xl font-bold">80%</p>
+    </div>
+
+    <!-- Характеристики автоклава и популяции SH -->
+    <div class="fixed bottom-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div class="bg-gray-800 p-4 rounded-lg mb-4">
+        <h2 class="font-bold mb-2">Автоклав</h2>
+        <p>Давление: 3 атмосферы</p>
+        <p>Температура: 150 градусов Цельсия</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded-lg">
+        <h2 class="font-bold mb-2">Популяция SH</h2>
+    </div>
+
+
+    
+</html>
